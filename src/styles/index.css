@@ -41,7 +41,7 @@ h1 {
 	align-items: stretch;
 }
 
-nav {
+.options-bar {
 	text-align: right;
 	z-index: 2;
 	border: 5px solid rgb(84, 238, 84);
@@ -49,6 +49,26 @@ nav {
 	margin: 1rem 1rem 0 1rem;
 }
 
+@keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+}
+
+.cursor p {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+.cursor p::after {
+	content: "";
+	width: 5px;
+	height: 20px;
+	background: #ffffff;
+	display: inline-block;
+	animation: cursor-blink 1.5s steps(2) infinite;
+}
 a {
 	width: 50px;
 	margin: 1rem;
