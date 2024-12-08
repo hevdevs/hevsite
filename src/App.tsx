@@ -1,15 +1,17 @@
-import Bio from "./pages/Bio";
-import MenuBar from "./components/MenuBar";
 import { Routes, Route } from "react-router";
+import TopBar from "./components/TopBar";
+import Home from "./pages/Home";
+import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Work from "./pages/Work";
 
 const App = () => {
 	return (
 		<>
-			<MenuBar />
+			<TopBar />
 			<Routes>
-				<Route path="/" element={<Bio />} />
+				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
 				<Route path="/work" element={<Work />} />
 				<Route path="/projects" element={<Projects />} />
 			</Routes>

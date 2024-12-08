@@ -1,16 +1,14 @@
 import React from "react";
-import DialogueBox from "../components/DialogueBox";
 import SpeakerBubble from "../components/SpeakerBubble";
 
-const Work: React.FC = () => {
+const Home: React.FC = () => {
 	return (
 		<div className="portal">
-			Projects
-			<SpeakerBubble />
+			Home
 			<div className="placeholder" />
-			<DialogueBox />
+			<SpeakerBubble />
 		</div>
 	);
 };
 
-export default Work;
+export default Home;

@@ -2,7 +2,7 @@ import React from "react";
 import DialogueBox from "../components/DialogueBox";
 import SpeakerBubble from "../components/SpeakerBubble";
 
-const Bio: React.FC = () => {
+const About: React.FC = () => {
 	return (
 		<div className="portal">
 			<SpeakerBubble />
@@ -12,4 +12,4 @@ const Bio: React.FC = () => {
 	);
 };
 
-export default Bio;
+export default About;
