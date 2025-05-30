@@ -1,14 +1,12 @@
-import React from "react";
-import DialogueBox from "../components/DialogueBox";
 import SpeakerBubble from "../components/SpeakerBubble";
+import hevWork from "../assets/hev_sprite_4.gif"
 
-const Work: React.FC = () => {
+const Work = () => {
+
 	return (
 		<div className="portal">
-			Projects
-			<SpeakerBubble />
-			<div className="placeholder" />
-			<DialogueBox />
+			<SpeakerBubble dialogue={["Here's my recent work history"]} />
+			<img src={hevWork} className="sprite" />
 		</div>
 	);
 };
