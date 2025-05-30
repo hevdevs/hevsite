@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 
-const useTypewriter = (text: String[], speed = 120) => {
+const useTypewriter = (text: String[], speed = 110) => {
 	const [charIndex, setCharIndex] = useState(0);
 	const [dialogueIndex, setDialogueIndex] = useState(0);
 	const [isTyping, setIsTyping] = useState(true);
