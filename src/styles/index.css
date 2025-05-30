@@ -4,8 +4,8 @@
 	font-weight: 400;
 	box-sizing: border-box;
 	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	color: rgba(0, 0, 0, 0.87);
+	background-color: #5e5e5e;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -30,23 +30,26 @@ h1 {
 
 .portal {
 	width: 90vw;
-	height: 90vh;
-	border: 5px solid rgb(84, 238, 84);
+	max-width: 1000px;
+	height: 80vh;
+	border: 5px solid rgb(0, 0, 0);
 	border-top: none;
 	margin: 0 1rem 1rem 1rem;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
 	align-items: stretch;
+	background-color: #cbcbcb;
 }
 
 .options-bar {
 	text-align: right;
 	z-index: 2;
-	border: 5px solid rgb(84, 238, 84);
+	border: 5px solid rgb(0, 0, 0);
 	width: 90vw;
+	max-width: 1000px;
 	margin: 1rem 1rem 0 1rem;
+	background-color: #dadada;;
 }
 
 @keyframes cursor-blink {
@@ -65,35 +68,64 @@ h1 {
 	content: "";
 	width: 5px;
 	height: 20px;
-	background: #ffffff;
+	background: #000000;
 	display: inline-block;
 	animation: cursor-blink 1.5s steps(2) infinite;
 }
 a {
 	width: 50px;
 	margin: 1rem;
+	background-color: inherit;
+}
+button {
+	background-color: inherit;
+	width:fit-content;
+	float: right;
+	
+}
+
+div {
+	background-color: inherit;
 }
 
 .dialogue-box {
-	border: 5px solid rgb(84, 238, 84);
+	border: 5px solid rgb(0, 0, 0);
 	flex-grow: 1;
 	margin: auto;
 	margin-bottom: 1rem;
-	width: 90%;
+	width: 70%;
 }
 
 .speaker-bubble {
 	flex-grow: 1;
-	border: 5px solid rgb(84, 238, 84);
+	border: 5px solid rgb(0, 0, 0);
 	margin: auto;
-	width: 90%;
+	max-width: 70%;
+	min-height: fit-content;
 	margin-top: 1rem;
+	background-color:  #f6f6f6;
+	padding:1rem
 }
 
-.placeholder {
+/* .placeholder {
 	flex-grow: 2;
 	height: 10%;
 	width: 50%;
 	border: 5px solid rgb(84, 238, 84);
 	margin: auto;
+} */
+.sprite {
+	flex-grow: 2;
+	margin-bottom: 2rem;
+	align-self: center;
+	max-width:80%;
+	min-height:40%;
+	object-fit: scale-down;
+	z-index: 2;
+
+}
+
+p {
+	background-color: #f6f6f6;
+	margin:0;
 }
