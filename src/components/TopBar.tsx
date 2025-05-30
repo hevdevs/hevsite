@@ -1,10 +1,12 @@
-import React from "react";
+import {NavLink } from "react-router";
 
-const TopBar: React.FC = () => {
+const TopBar = () => {
 	return (
 		<section className="options-bar">
-			<button>1</button>
-			<button>2</button>
+			<NavLink to="/">Intro</NavLink>
+			<NavLink to="/work">XP</NavLink>
+			<NavLink to="/projects">Inventory</NavLink>
+			<NavLink to="/about">Character</NavLink>
 		</section>
 	);
 };
