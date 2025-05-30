@@ -1,23 +1,18 @@
 import useTypewriter from "../hooks/useTypewriter";
-import DialogueBox from "./DialogueBox";
 
-const SpeakerBubble: React.FC = () => {
-	const { nextLine, isTyping, displayText } = useTypewriter([
-		"Hi there! My name is Hev. It's nice to meet you.",
-		"I am a Software Engineer and Educator, currently based in Manchester.",
-		"Fancy a look around...?",
-	]);
+const SpeakerBubble  = ({dialogue}: {dialogue: String[]}) => {
+	const { nextLine, isTyping, displayText } = useTypewriter(dialogue);
 
 	return (
+		<div>
 		<div className="speaker-bubble">
 			<span className="cursor">
 				<p>{displayText}</p>
 			</span>
+			</div>
 			<button disabled={isTyping} onClick={nextLine}>
 				Continue
-			</button>
-			<DialogueBox />
-		</div>
+			</button></div>
 	);
 };
 
