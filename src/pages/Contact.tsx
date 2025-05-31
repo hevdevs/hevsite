@@ -23,24 +23,31 @@ const Contact = () => {
 					"Let's talk about building great stuff together!",
 				]}
 			/>
-			<div>
+			<div className="alt-sprite">
+				<div className="links-group">
+					<Link
+						className="external-nav tooltip"
+						to="https://www.linkedin.com/in/heather-magnier-ashton/">
+						<span className="tooltiptext jersey-10-regular">LinkedIn</span>
+						<img src={linkedin} className="icon" />
+					</Link>
+					<Link
+						className="external-nav tooltip"
+						to="https://github.com/hevdevs">
+						<span className="tooltiptext jersey-10-regular">GitHub</span>
+						<img src={gh} className="icon" />
+					</Link>
+					<Link className="external-nav tooltip" to="mailto:hevmdevs@gmail.com">
+						<span className="tooltiptext jersey-10-regular">Email</span>
+						<img src={email} className="icon" />
+					</Link>
+				</div>
 				<img
 					className="sprite"
 					onMouseEnter={handleMouseOver}
 					onMouseLeave={handleMouseLeave}
 					src={hover ? hevGiggle : hevIdle}
 				/>
-				<Link
-					className="external-nav"
-					to="https://www.linkedin.com/in/heather-magnier-ashton/">
-					<img src={linkedin} className="icon" />
-				</Link>
-				<Link className="external-nav" to="https://github.com/hevdevs">
-					<img src={gh} className="icon" />
-				</Link>
-				<Link className="external-nav" to="mailto:hevmdevs@gmail.com">
-					<img src={email} className="icon" />
-				</Link>
 			</div>
 		</div>
 	);
