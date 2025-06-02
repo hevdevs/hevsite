@@ -15,6 +15,7 @@ const Projects = () => {
 			<SpeakerBubble dialogue={["Here are some of my recent projects"]} />
 			<div className="content-display">
 				<img src={gifSrc} className="sprite" />
+				<div className="aside"></div>
 			</div>
 		</div>
 	);
