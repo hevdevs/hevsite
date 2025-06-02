@@ -18,7 +18,7 @@ body {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
-	margin: 0;
+	margin: auto;
 	background-color: #a3a3a3;
 }
 
@@ -71,7 +71,7 @@ main {
 	align-items: center;
 	align-content: center;
 	height: 100%;
-	width: 90%;
+	width: 100%;
 	position: absolute;
 }
 
