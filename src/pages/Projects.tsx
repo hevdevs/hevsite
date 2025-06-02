@@ -13,7 +13,9 @@ const Projects = () => {
 	return (
 		<div className="portal">
 			<SpeakerBubble dialogue={["Here are some of my recent projects"]} />
-			<img src={gifSrc} className="sprite" />
+			<div className="content-display">
+				<img src={gifSrc} className="sprite" />
+			</div>
 		</div>
 	);
 };

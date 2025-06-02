@@ -11,7 +11,9 @@ const Home = () => {
 					"Take a look around...",
 				]}
 			/>
-			<img src={hevHi} className="sprite" />
+			<div className="content-display">
+				<img src={hevHi} className="sprite" />
+			</div>
 		</div>
 	);
 };
