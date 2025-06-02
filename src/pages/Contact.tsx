@@ -23,23 +23,23 @@ const Contact = () => {
 					"Let's talk about building great stuff together!",
 				]}
 			/>
-			<div className="alt-sprite">
+			<div className="content-display">
 				<div className="links-group">
 					<Link
 						className="external-nav tooltip"
 						to="https://www.linkedin.com/in/heather-magnier-ashton/">
-						<span className="tooltiptext jersey-10-regular">LinkedIn</span>
 						<img src={linkedin} className="icon" />
+						<span className="tooltiptext jersey-10-regular">LinkedIn</span>
 					</Link>
 					<Link
 						className="external-nav tooltip"
 						to="https://github.com/hevdevs">
-						<span className="tooltiptext jersey-10-regular">GitHub</span>
 						<img src={gh} className="icon" />
+						<span className="tooltiptext jersey-10-regular">GitHub</span>
 					</Link>
 					<Link className="external-nav tooltip" to="mailto:hevmdevs@gmail.com">
-						<span className="tooltiptext jersey-10-regular">Email</span>
 						<img src={email} className="icon" />
+						<span className="tooltiptext jersey-10-regular">Email</span>
 					</Link>
 				</div>
 				<img

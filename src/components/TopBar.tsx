@@ -8,20 +8,20 @@ const TopBar = () => {
 	return (
 		<nav className="options-bar">
 			<NavLink to="/contact" title="Contact" className="nav tooltip">
-				<span className="tooltiptext jersey-10-regular">Get in touch</span>
 				<img className="icon" src={contact} />
+				<span className="tooltiptext jersey-10-regular">Contact</span>
 			</NavLink>
 			<NavLink to="/projects" title="Projects" className="nav tooltip">
-				<span className="tooltiptext jersey-10-regular">View projects</span>
 				<img src={projects} className="icon" />
+				<span className="tooltiptext jersey-10-regular">Projects</span>
 			</NavLink>
 			<NavLink to="/work" title="Career" className="nav tooltip">
-				<span className="tooltiptext jersey-10-regular">Career stuff</span>
 				<img src={briefcase} className="icon" />
+				<span className="tooltiptext jersey-10-regular">CV</span>
 			</NavLink>
 			<NavLink to="/" title="Home Page" className="nav tooltip">
-				<span className="tooltiptext jersey-10-regular">Back to home</span>
-				<img src={home} className="icon" />
+				<img src={home} id="home" className="icon" />
+				<span className="tooltiptext jersey-10-regular">Home</span>
 			</NavLink>
 		</nav>
 	);
