@@ -5,7 +5,7 @@ const Work = () => {
 	return (
 		<div className="portal">
 			<SpeakerBubble dialogue={["Here's my recent work history"]} />
-			<div className="alt-sprite">
+			<div className="content-display">
 				<img src={hevWork} className="sprite" />
 				<div className="aside jersey-10-regular">
 					<h2>Experience</h2>
