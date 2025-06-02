@@ -7,7 +7,7 @@ import Work from "./pages/Work";
 
 const App = () => {
 	return (
-		<>
+		<main>
 			<TopBar />
 			<Routes>
 				<Route path="/" element={<Home />} />
@@ -15,7 +15,7 @@ const App = () => {
 				<Route path="/work" element={<Work />} />
 				<Route path="/projects" element={<Projects />} />
 			</Routes>
-		</>
+		</main>
 	);
 };
 
