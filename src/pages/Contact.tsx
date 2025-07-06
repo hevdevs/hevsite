@@ -19,7 +19,7 @@ const Contact = () => {
 		<div className="portal">
 			<SpeakerBubble
 				dialogue={[
-					"You can contact me through any of these places...",
+					"You can find me on any of these sites...",
 					"Let's talk about building great stuff together!",
 				]}
 			/>
@@ -29,17 +29,25 @@ const Contact = () => {
 						className="external-nav tooltip"
 						to="https://www.linkedin.com/in/heather-magnier-ashton/">
 						<img src={linkedin} className="icon" />
-						<span className="tooltiptext jersey-10-regular">LinkedIn</span>
+						<span className="tooltiptext jersey-10-regular">
+							LinkedIn
+						</span>
 					</Link>
 					<Link
 						className="external-nav tooltip"
 						to="https://github.com/hevdevs">
 						<img src={gh} className="icon" />
-						<span className="tooltiptext jersey-10-regular">GitHub</span>
+						<span className="tooltiptext jersey-10-regular">
+							GitHub
+						</span>
 					</Link>
-					<Link className="external-nav tooltip" to="mailto:hevmdevs@gmail.com">
+					<Link
+						className="external-nav tooltip"
+						to="mailto:hevmdevs@gmail.com">
 						<img src={email} className="icon" />
-						<span className="tooltiptext jersey-10-regular">Email</span>
+						<span className="tooltiptext jersey-10-regular">
+							Email
+						</span>
 					</Link>
 				</div>
 				<img
