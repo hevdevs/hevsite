@@ -8,12 +8,16 @@ const SpeakerBubble = ({ dialogue }: { dialogue: String[] }) => {
 			<p className="jersey-10-regular dialogue">
 				{displayText ? displayText : "..."}
 			</p>
-			<button
-				className={"dialogue-next"}
-				disabled={isTyping}
-				onClick={nextLine}>
-				Continue
-			</button>
+			{dialogue.length === 1 ? null : (
+				<button
+					className={"dialogue-next"}
+					disabled={isTyping}
+					onClick={nextLine}>
+					{displayText === dialogue[dialogue.length - 1]
+						? "Replay"
+						: "Continue"}
+				</button>
+			)}
 		</div>
 	);
 };
