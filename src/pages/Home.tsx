@@ -6,13 +6,17 @@ const Home = () => {
 		<div className="portal">
 			<SpeakerBubble
 				dialogue={[
-					"Hi there! My name is Hev. It's nice to meet you.",
-					"I am a Senior Software Engineer based in Manchester.",
+					"Hi there! My name is Hev.",
+					"It's nice to meet you.",
+					"I am a Senior Software Engineer from Manchester.",
 					"Take a look around...",
 				]}
 			/>
 			<div className="content-display">
 				<img src={hevHi} className="sprite" />
+				<div className="aside jersey-10-regular" id="stats">
+					<h2>Stats</h2>
+				</div>
 			</div>
 		</div>
 	);
