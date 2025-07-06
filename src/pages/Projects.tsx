@@ -109,35 +109,48 @@ type Repo = {
 const Projects = () => {
 	const [gifSrc, setGifSrc] = useState(hevWorkStart);
 	const [repos, setRepos] = useState<[] | Repo[]>([]);
+
 	useEffect(() => {
 		setTimeout(() => {
 			setGifSrc(hevWorkLoop);
 		}, 3500);
 		axios
 			.get(
-				"https://api.github.com/users/hevdevs/repos?sort=created&direction=desc"
+				`https://api.github.com/users/hevdevs/repos?sort=created&direction=desc`
 			)
 			.then(({ data }) => {
-				setRepos(
-					data.filter((proj: Repo) => {
-						return proj.fork === false;
-					})
-				);
+				setRepos(data);
 			});
 	}, []);
 
 	return (
 		<div className="portal">
-			<SpeakerBubble dialogue={["Here are some of my recent projects"]} />
+			<div className="alt-dialogue">
+				<img src={gifSrc} className="sprite-alt" />
+				<SpeakerBubble
+					dialogue={["Check out some of my personal projects."]}
+				/>
+			</div>
 			<div className="content-display">
-				<img src={gifSrc} className="sprite" />
 				<div className="aside">
 					{repos.map((repo: Repo) => {
+						const lastUpdateStr = new Date(
+							repo?.updated_at
+						).toLocaleDateString("en-GB");
+						const createdStr = new Date(
+							repo?.created_at
+						).toLocaleDateString("en-GB");
 						return (
-							<div>
-								<p>{repo?.name}</p>
+							<div key={repo?.id} className="proj-card">
+								<h3>
+									<a href={repo?.html_url}>{repo?.name}</a>
+								</h3>
+								<p>
+									{repo?.fork ? "Fork created " : "Created "}
+									{createdStr}
+								</p>
 								<p>{repo?.description}</p>
-								<p>{repo?.created_at}</p>
+								<p>Last updated on {lastUpdateStr}</p>
 							</div>
 						);
 					})}
