@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 
-const useTypewriter = (text: String[], speed = 50) => {
+const useTypewriter = (text: string[], speed = 50) => {
 	const [charIndex, setCharIndex] = useState(0);
 	const [dialogueIndex, setDialogueIndex] = useState(0);
 	const [isTyping, setIsTyping] = useState(true);
@@ -10,9 +10,11 @@ const useTypewriter = (text: String[], speed = 50) => {
 		[charIndex]
 	);
 	function nextLine() {
-		text[dialogueIndex + 1]
-			? setDialogueIndex((i) => i + 1)
-			: setDialogueIndex(0);
+		if (text[dialogueIndex + 1]) {
+			setDialogueIndex((i) => i + 1);
+		} else {
+			setDialogueIndex(0);
+		}
 		setCharIndex(0);
 		setIsTyping(true);
 	}

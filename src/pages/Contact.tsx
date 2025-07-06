@@ -1,7 +1,7 @@
 import SpeakerBubble from "../components/SpeakerBubble";
 import hevIdle from "../assets/hev_sprite_3.gif";
 import hevGiggle from "../assets/hev_sprite_2.gif";
-import { useState } from "react";
+import React, { useState } from "react";
 import linkedin from "../assets/li.svg";
 import gh from "../assets/gh.svg";
 import email from "../assets/email.svg";

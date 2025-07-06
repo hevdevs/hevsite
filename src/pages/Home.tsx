@@ -1,5 +1,6 @@
 import SpeakerBubble from "../components/SpeakerBubble";
 import hevHi from "../assets/hev_sprite_1.gif";
+import React from "react";
 
 const Home = () => {
 	return (

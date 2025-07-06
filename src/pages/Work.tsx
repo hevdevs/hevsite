@@ -1,5 +1,6 @@
 import SpeakerBubble from "../components/SpeakerBubble";
 import hevTalk from "../assets/hev_sprite_6.gif";
+import React from "react";
 
 const Work = () => {
 	return (

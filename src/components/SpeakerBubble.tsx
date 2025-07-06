@@ -1,6 +1,7 @@
 import useTypewriter from "../hooks/useTypewriter";
+import React from "react";
 
-const SpeakerBubble = ({ dialogue }: { dialogue: String[] }) => {
+const SpeakerBubble = ({ dialogue }: { dialogue: string[] }) => {
 	const { nextLine, isTyping, displayText } = useTypewriter(dialogue);
 
 	return (
