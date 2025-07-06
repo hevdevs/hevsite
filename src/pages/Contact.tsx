@@ -4,7 +4,7 @@ import hevGiggle from "../assets/hev_sprite_2.gif";
 import { useState } from "react";
 import linkedin from "../assets/li.svg";
 import gh from "../assets/gh.svg";
-import email from "../assets/email.svg";
+import email from "../assets/envelope.svg";
 import { Link } from "react-router";
 
 const Contact = () => {
@@ -20,7 +20,7 @@ const Contact = () => {
 			<SpeakerBubble
 				dialogue={[
 					"You can find me on any of these sites...",
-					"Let's talk about building great stuff together!",
+					"Let's talk!",
 				]}
 			/>
 			<div className="content-display">
