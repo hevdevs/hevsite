@@ -3,7 +3,7 @@ import projects from "../assets/projects.svg";
 import home from "../assets/home.svg";
 import contact from "../assets/contact.svg";
 import briefcase from "../assets/briefcase.svg";
-import React from "react";
+// import React from "react";
 
 const TopBar = () => {
 	return (

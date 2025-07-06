@@ -1,7 +1,7 @@
 import SpeakerBubble from "../components/SpeakerBubble";
 import hevWorkStart from "../assets/hev_sprite_4.gif";
 import hevWorkLoop from "../assets/hev_sprite_5.gif";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 type Repo = {
