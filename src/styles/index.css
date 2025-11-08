@@ -106,6 +106,7 @@ main {
 	flex-direction: column;
 	justify-self: center;
 	align-self: center;
+	min-width: 0;
 }
 
 .speaker-bubble {
@@ -169,6 +170,27 @@ span {
 	transition: background-color 1s ease-out;
 }
 
+.cr-link {
+	width: 200px;
+
+}
+
+.cr-badges {
+	width: 100%;
+	height: auto;
+	object-fit: scale-down;
+	border: 5px solid black;
+	padding: 5px;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+	transition: filter 1s ease-out;
+}
+
+.cr-badges:hover {
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
 .icon:hover {
 	background-color: #eee;
 }
@@ -204,6 +226,19 @@ span {
 	overflow: auto;
 	object-fit: scale-down;
 	background-color: transparent;
+}
+
+.trio {
+	display: flex;
+	flex-direction: row;
+	background-color: transparent;
+	justify-content: center;
+	object-fit: scale-down;
+	overflow: auto;
+	padding-bottom: 0.5rem;
+	flex-grow: 1;
+	min-width: 0;
+	height: inherit;
 }
 
 .sprite {
@@ -244,8 +279,29 @@ span {
 	row-gap: 1rem;
 }
 
-#stats {
-	grid-row: auto;
+.info {
+	background-color: #e5e5e5;
+	border: 5px solid black;
+	color: rgb(0, 0, 0);
+	padding: 1rem;
+	overflow-y: scroll;
+	min-width: fit-content;
+	margin: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1
+}
+
+.char {
+	margin: 0;
+	object-fit: scale-down;
+	min-height: 0;
+	min-width: 0;
+	padding: 0.5rem;
+	z-index: 5;
+	flex-grow: 1;
+	display: inline-block;
 }
 
 .proj-card {
@@ -257,7 +313,7 @@ span {
 a {
 	transition: all 1s ease-in-out;
 }
-a:hover {
+.nav, .external-nav:hover {
 	background-color: black;
 	color: #f3f3f3;
 }
@@ -293,6 +349,9 @@ a:hover {
 	.dialogue,
 	.dialogue-next {
 		font-size: 1.5rem;
+	}
+	.trio {
+		flex-direction: column;
 	}
 
 	.icon {
