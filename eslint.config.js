@@ -8,4 +8,5 @@ export default defineConfig([
 	tseslint.configs.recommended,
 	pluginJs.configs.recommended,
 	{ languageOptions: { globals: globals.browser } },
+	{ files: ["**/*.{ts,tsx}"] },
 ]);
