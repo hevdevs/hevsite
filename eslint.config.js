@@ -1,19 +1,11 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
+import { defineConfig, globalIgnores } from "eslint/config";
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-	{
-		files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
-		settings: {
-			react: {
-				version: "detect",
-			},
-			rules: { "react/react-in-jsx-scope": "off" },
-		},
-	},
-	{ languageOptions: { globals: globals.browser } },
+export default defineConfig([
+	globalIgnores(["node_modules/*", "build/**/*"]),
+	tseslint.configs.recommended,
 	pluginJs.configs.recommended,
-	...tseslint.configs.recommended,
-];
+	{ languageOptions: { globals: globals.browser } },
+]);
