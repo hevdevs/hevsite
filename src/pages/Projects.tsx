@@ -1,4 +1,4 @@
-import SpeakerBubble from "../components/SpeakerBubble";
+import SpeakerBubble from "../components/SpeakerBubble/SpeakerBubble";
 import deskSpriteStart from "../assets/sprites/desk_1.gif";
 import deskSpriteLoop from "../assets/sprites/desk_2.gif";
 import { useEffect, useState } from "react";

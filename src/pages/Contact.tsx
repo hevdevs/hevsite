@@ -1,4 +1,4 @@
-import SpeakerBubble from "../components/SpeakerBubble";
+import SpeakerBubble from "../components/SpeakerBubble/SpeakerBubble";
 import idleSprite from "../assets/sprites/idle_1.gif";
 import idleHoverSprite from "../assets/sprites/idle_1_hover.gif";
 import { useState } from "react";

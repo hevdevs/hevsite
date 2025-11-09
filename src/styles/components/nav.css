@@ -1,0 +1,58 @@
+.options-bar {
+	display: flex;
+	flex-direction: row;
+	background-color: #13141c;
+	color: #f3f3f3;
+}
+@media screen and (width <= 650px) and (orientation: portrait) {
+	.options-bar {
+		text-align: left;
+		align-content: flex-start;
+		gap: 1em;
+		padding: 1rem;
+		width: 100%;
+		z-index: 1;
+		border-bottom: 5px solid rgb(51, 255, 51);
+	}
+	.icon {
+		height: 4rem;
+	}
+}
+
+@media screen and (width > 650px) {
+	.options-bar {
+		width: 90vw;
+		max-width: 1000px;
+		margin-bottom: 0;
+		justify-content: start;
+		gap: 1em;
+		padding: 1rem;
+		border: 3px solid rgb(51, 255, 51);
+	}
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		transition: all 0.5s ease-out;
+	}
+
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		min-width: 120px;
+		background-color: #13141c;
+		color: #33ff33;
+		padding: 5px 0;
+		border: 3px solid rgb(51, 255, 51);
+		box-shadow: 2px 2px 2px #13141c;
+		position: absolute;
+		top: 90%;
+		left: 50%;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
+	}
+}

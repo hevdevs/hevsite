@@ -1,4 +1,4 @@
-import SpeakerBubble from "../components/SpeakerBubble";
+import SpeakerBubble from "../components/SpeakerBubble/SpeakerBubble";
 import waveSprite from "../assets/sprites/wave_1.gif";
 import { Link } from "react-router";
 

@@ -1,11 +1,11 @@
-import useTypewriter from "../hooks/useTypewriter";
+import useTypewriter from "../../hooks/useTypewriter";
 
 const SpeakerBubble = ({ dialogue }: { dialogue: string[] }) => {
 	const { nextLine, isTyping, displayText } = useTypewriter(dialogue);
 
 	return (
-		<div className="speaker-bubble">
-			<p className="jersey-10-regular dialogue">
+		<div className='speaker-bubble'>
+			<p className='jersey-10-regular dialogue'>
 				{displayText ? displayText : "..."}
 			</p>
 			{dialogue.length === 1 ? null : (

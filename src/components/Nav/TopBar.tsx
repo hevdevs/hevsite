@@ -1,8 +1,8 @@
 import { NavLink } from "react-router";
-import projects from "../assets/icons/projects.svg";
-import home from "../assets/icons/home.svg";
-import contact from "../assets/icons/contact.svg";
-import briefcase from "../assets/icons/briefcase.svg";
+import projects from "../../assets/icons/projects.svg";
+import home from "../../assets/icons/home.svg";
+import contact from "../../assets/icons/contact.svg";
+import briefcase from "../../assets/icons/briefcase.svg";
 
 const TopBar = () => {
 	return (

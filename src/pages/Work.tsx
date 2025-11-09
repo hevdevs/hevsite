@@ -1,5 +1,5 @@
-import SpeakerBubble from "../components/SpeakerBubble";
-import idleSprite from "../assets/sprites/idle_2.gif";
+import SpeakerBubble from "../components/SpeakerBubble/SpeakerBubble";
+import idleSprite from "../assets/images/sprites/idle_2.gif";
 
 const Work = () => {
 	return (
