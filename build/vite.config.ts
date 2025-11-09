@@ -21,7 +21,7 @@ const buildOptions = {
 
 export default defineConfig({
 	root: "src",
-	publicDir: "assets/public",
+	publicDir: "public",
 	cacheDir: path.resolve("node_modules/.vite"),
 	css: cssOptions,
 	build: buildOptions,
