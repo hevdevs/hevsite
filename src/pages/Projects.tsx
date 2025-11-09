@@ -1,29 +1,23 @@
 import SpeakerBubble from "../components/SpeakerBubble";
-import hevWorkStart from "../assets/hev_sprite_4.gif";
-import hevWorkLoop from "../assets/hev_sprite_5.gif";
+import deskSpriteStart from "../assets/sprites/desk_1.gif";
+import deskSpriteLoop from "../assets/sprites/desk_2.gif";
 import { useEffect, useState } from "react";
 
 const Projects = () => {
-	const [gifSrc, setGifSrc] = useState(hevWorkStart);
+	const [gifSrc, setGifSrc] = useState(deskSpriteStart);
 
 	useEffect(() => {
 		setTimeout(() => {
-			setGifSrc(hevWorkLoop);
+			setGifSrc(deskSpriteLoop);
 		}, 3500);
 	}, []);
 
 	return (
-		<div className="portal">
-			<div className="alt-dialogue">
-				<img src={gifSrc} className="sprite-alt" />
-				<SpeakerBubble
-					dialogue={["Check out some of my personal projects."]}
-				/>
-			</div>
-			<div className="content-display">
-				<div className="aside">
-					
-				</div>
+		<div className='portal'>
+			<img src={gifSrc} className='sprite-alt' />
+			<SpeakerBubble dialogue={["Check out some of my personal projects."]} />
+			<div className='content-display'>
+				<div className='aside'></div>
 			</div>
 		</div>
 	);

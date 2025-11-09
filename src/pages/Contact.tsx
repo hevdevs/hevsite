@@ -1,10 +1,10 @@
 import SpeakerBubble from "../components/SpeakerBubble";
-import hevIdle from "../assets/hev_sprite_3.gif";
-import hevGiggle from "../assets/hev_sprite_2.gif";
+import idleSprite from "../assets/sprites/idle_1.gif";
+import idleHoverSprite from "../assets/sprites/idle_1_hover.gif";
 import { useState } from "react";
-import linkedin from "../assets/li.svg";
-import gh from "../assets/gh.svg";
-import email from "../assets/envelope.svg";
+import linkedin from "../assets/icons/li.svg";
+import gh from "../assets/icons/gh.svg";
+import email from "../assets/icons/envelope.svg";
 import { Link } from "react-router";
 
 const Contact = () => {
@@ -43,7 +43,7 @@ const Contact = () => {
 					className='sprite'
 					onMouseEnter={handleMouseOver}
 					onMouseLeave={handleMouseLeave}
-					src={hover ? hevGiggle : hevIdle}
+					src={hover ? idleHoverSprite : idleSprite}
 				/>
 			</div>
 		</div>

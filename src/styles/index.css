@@ -14,7 +14,7 @@
 	font-weight: 400;
 	box-sizing: border-box;
 	color-scheme: light dark;
-	color: rgba(0, 0, 0, 0.87);
+	color: #33ff33;
 	background-color: transparent;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -28,7 +28,8 @@ body {
 	width: 100%;
 	overflow: hidden;
 	margin: auto;
-	background-color: #a3a3a3;
+	background-color: #13141c;
+	color: #33ff33;
 }
 
 /* text */
@@ -69,23 +70,25 @@ h4 {
 	font-weight: 400;
 	font-style: normal;
 	font-size: 2rem;
-	color: #f6f6f6;
-	background-color: rgb(16, 16, 16);
+	color: #33ff33;
+	background-color: #13141c;
 	margin: auto;
 	justify-self: flex-end;
 	float: right;
-	box-shadow: 2px 2px 2px #474747;
+	border: 3px solid #33ff33;
+	/* box-shadow: 2px 2px 2px #33ff33; */
 	transition: background-color 1s ease-out;
 }
 
 .dialogue-next:hover {
-	background-color: black;
-	background-color: #4b4b4b;
+	/* background-color: #33ff33; */
+	background-color: #313448;
 }
 
 .dialogue-next:disabled {
 	color: #303030;
-	background-color: black;
+	background-color: #13141c;
+	border: 3px solid #313448;
 }
 /* main content */
 main {
@@ -111,10 +114,10 @@ main {
 
 .speaker-bubble {
 	flex-grow: 1;
-	border: 5px solid black;
+	border: 3px solid rgb(51, 255, 51);
 	max-height: fit-content;
 	padding: 1rem;
-	background-color: #f3f3f3;
+	background-color: #13141c;
 	align-self: center;
 }
 
@@ -139,10 +142,8 @@ span {
 
 .options-bar {
 	display: flex;
-	flex-direction: row-reverse;
-	justify-self: center;
-	align-self: center;
-	background-color: #dadada;
+	flex-direction: row;
+	background-color: #13141c;
 	color: #f3f3f3;
 }
 
@@ -153,7 +154,7 @@ span {
 	text-align: center;
 	justify-content: space-evenly;
 	background-color: transparent;
-	color: #f3f3f3;
+	color: #13141c;
 	width: 100%;
 	z-index: 1;
 	grid-row: 2;
@@ -162,57 +163,55 @@ span {
 }
 
 .icon {
-	background-color: #f5f5f5;
+	background-color: #13141c;
 	margin: 0;
 	display: block;
-	border: 3px solid rgb(0, 0, 0);
+	border: 3px solid rgb(51, 255, 51);
 	padding: 0.5rem;
 	transition: background-color 1s ease-out;
 }
 
 .cr-link {
 	width: 200px;
-
 }
 
 .cr-badges {
 	width: 100%;
 	height: auto;
 	object-fit: scale-down;
-	border: 5px solid black;
+	border: 3px solid #33ff33;
 	padding: 5px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+	/* Safari 6.0 - 9.0 */
 	transition: filter 1s ease-out;
 }
 
 .cr-badges:hover {
 	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%);
+	filter: grayscale(0%);
 }
 
 .icon:hover {
-	background-color: #eee;
+	background-color: #313448;
 }
 
-.icon:active {
-	background-color: #4b4b4b;
+​ .icon:active {
+	background-color: #313448;
 }
 .external-nav,
 .nav {
-	background-color: black;
-	color: #f3f3f3;
+	background-color: rgb(51, 255, 51);
+	color: #13141c;
 	transition: background-color 1s ease-out;
 }
 
 .nav:hover,
 .external-nav:hover {
-	color: #4b4b4b;
+	background-color: #313448;
 }
 
 .nav:active,
 .external-nav:active {
-	background-color: #4b4b4b;
+	background-color: #13141c;
 }
 
 .content-display {
@@ -228,17 +227,27 @@ span {
 	background-color: transparent;
 }
 
-.trio {
+.duo {
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	background-color: transparent;
-	justify-content: center;
+	justify-content: flex-end;
 	object-fit: scale-down;
 	overflow: auto;
 	padding-bottom: 0.5rem;
 	flex-grow: 1;
 	min-width: 0;
+	gap: 1em;
 	height: inherit;
+}
+
+.trio {
+	display: flex;
+	flex-direction: row;
+	background-color: transparent;
+	justify-content: flex-start;
+	object-fit: scale-down;
+	height: 80%;
 }
 
 .sprite {
@@ -265,9 +274,8 @@ span {
 }
 
 .aside {
-	background-color: #e5e5e5;
-	border: 5px solid black;
-	color: rgb(0, 0, 0);
+	background-color: #13141c;
+	border: 3px solid rgb(51, 255, 51);
 	padding: 1rem;
 	overflow-y: scroll;
 	height: 100%;
@@ -280,9 +288,8 @@ span {
 }
 
 .info {
-	background-color: #e5e5e5;
-	border: 5px solid black;
-	color: rgb(0, 0, 0);
+	background-color: #13141c;
+	border: 3px solid rgb(51, 255, 51);
 	padding: 1rem;
 	overflow-y: scroll;
 	min-width: fit-content;
@@ -290,32 +297,34 @@ span {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	flex-grow: 1
+	flex-grow: 1;
+	z-index: 5;
+	scrollbar-color: #33ff33 #13141c;
 }
-
 .char {
 	margin: 0;
 	object-fit: scale-down;
 	min-height: 0;
-	min-width: 0;
+	max-width: 30%;
 	padding: 0.5rem;
-	z-index: 5;
+	z-index: 0;
 	flex-grow: 1;
 	display: inline-block;
 }
 
 .proj-card {
-	background-color: #f3f3f3;
+	background-color: #13141c;
 	padding: 1rem;
-	border: 3px solid black;
+	border: 3px solid rgb(51, 255, 51);
 }
 
 a {
 	transition: all 1s ease-in-out;
 }
-.nav, .external-nav:hover {
-	background-color: black;
-	color: #f3f3f3;
+.nav,
+.external-nav:hover {
+	background-color: #13141c;
+	color: #33ff33;
 }
 
 @media screen and (width <= 650px) and (orientation: portrait) {
@@ -333,12 +342,13 @@ a {
 	}
 
 	.options-bar {
-		text-align: center;
-		justify-content: space-evenly;
+		text-align: left;
+		align-content: flex-start;
+		gap: 1em;
 		padding: 1rem;
 		width: 100%;
 		z-index: 1;
-		border-bottom: 5px solid black;
+		border-bottom: 5px solid rgb(51, 255, 51);
 	}
 
 	.speaker-bubble {
@@ -363,9 +373,9 @@ a {
 	.portal {
 		width: 90vw;
 		max-width: 1000px;
-		height: 70vh;
-		max-height: 90vh;
-		border: 5px solid rgb(0, 0, 0);
+		/* height: 70vh; */
+		max-height: 50vh;
+		border: 3px solid rgb(51, 255, 51);
 		border-top: none;
 		padding: 1rem;
 	}
@@ -379,9 +389,10 @@ a {
 		width: 90vw;
 		max-width: 1000px;
 		margin-bottom: 0;
-		justify-content: space-evenly;
+		justify-content: start;
+		gap: 1em;
 		padding: 1rem;
-		border: 5px solid black;
+		border: 3px solid rgb(51, 255, 51);
 	}
 
 	.tooltip {
@@ -393,11 +404,11 @@ a {
 	.tooltip .tooltiptext {
 		visibility: hidden;
 		min-width: 120px;
-		background-color: rgb(0, 0, 0);
-		color: #f3f3f3;
+		background-color: #13141c;
+		color: #33ff33;
 		padding: 5px 0;
-		border: 2px solid #dbdbdb;
-		box-shadow: 2px 2px 2px #474747;
+		border: 3px solid rgb(51, 255, 51);
+		box-shadow: 2px 2px 2px #13141c;
 		position: absolute;
 		top: 90%;
 		left: 50%;

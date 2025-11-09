@@ -1,13 +1,11 @@
 import SpeakerBubble from "../components/SpeakerBubble";
-import hevTalk from "../assets/hev_sprite_6.gif";
+import idleSprite from "../assets/sprites/idle_2.gif";
 
 const Work = () => {
 	return (
 		<div className='portal'>
-			<div className='alt-dialogue'>
-				<img src={hevTalk} className='sprite-alt' id='talking-head' />
-				<SpeakerBubble dialogue={["Here's my recent work history"]} />
-			</div>
+			<img src={idleSprite} className='sprite-alt' id='talking-head' />
+			<SpeakerBubble dialogue={["Here's my recent work history"]} />
 			<div className='content-display'>
 				<div className='aside jersey-10-regular' id='cv'>
 					<h2>Experience</h2>

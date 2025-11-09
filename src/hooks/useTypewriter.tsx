@@ -1,13 +1,13 @@
 import { useState, useEffect, useMemo } from "react";
 
-const useTypewriter = (text: string[], speed = 50) => {
+const useTypewriter = (text: string[], speed = 30) => {
 	const [charIndex, setCharIndex] = useState(0);
 	const [dialogueIndex, setDialogueIndex] = useState(0);
 	const [isTyping, setIsTyping] = useState(true);
 
 	const displayText = useMemo(
 		() => text[dialogueIndex].slice(0, charIndex),
-		[charIndex]
+		[charIndex],
 	);
 	function nextLine() {
 		if (text[dialogueIndex + 1]) {
