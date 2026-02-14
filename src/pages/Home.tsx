@@ -1,5 +1,5 @@
 import SpeakerBubble from "../components/SpeakerBubble/SpeakerBubble";
-import waveSprite from "../assets/sprites/wave_1.gif";
+import waveSprite from "../assets/images/sprites/wave_1.gif";
 import { Link } from "react-router";
 
 const Home = () => {
